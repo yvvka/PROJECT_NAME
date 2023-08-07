@@ -21,18 +21,30 @@ class Task extends Model
      * 状態を表すHTMLクラス
      * @return string
      */
-    public function getStatusClassAttribute()
+    public function getStatusLabelAttribute()
     {
         // 状態値
         $status = $this->attributes['status'];
-    
+
         // 定義されていなければ空文字を返す
         if (!isset(self::STATUS[$status])) {
             return '';
         }
-    
-        return self::STATUS[$status]['class'];
+
+        return self::STATUS[$status]['label'];
     }
+    public function getStatusClassAttribute()
+{
+    // 状態値
+    $status = $this->attributes['status'];
+
+    // 定義されていなければ空文字を返す
+    if (!isset(self::STATUS[$status])) {
+        return '';
+    }
+
+    return self::STATUS[$status]['class'];
+}
     public function getFormattedDueDateAttribute()
     {
         return Carbon::createFromFormat('Y-m-d', $this->attributes['due_date'])
