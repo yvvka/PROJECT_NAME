@@ -19,7 +19,7 @@
                 @endforeach
               </div>
             @endif
-            <form action="{{ route('tasks.create', ['id' => $folder_id]) }}" method="POST">
+            <form action="{{ route('tasks.create', ['folder' => $folder_id]) }}" method="POST">
               @csrf
               <div class="form-group">
                 <label for="title">タイトル</label>
@@ -38,8 +38,8 @@
       </div>
     </div>
   </div>
-  @endsection
+@endsection
 
-  @section('scripts')
-    @include('share.flatpickr.scripts')
-  @endsection
+@section('scripts')
+  @include('share.flatpickr.scripts')
+@endsection
