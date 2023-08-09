@@ -1,66 +1,73 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## 環境構築手順
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+エディター：VS Code
 
-## About Laravel
+①Docker Desktopを起動させる
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+②	プロジェクトをVS Codeで開く
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Windows PowerShellを開いてUbuntu-20.04を選択し”cd PROJECT_NAME”, ”code .”でVS Codeでプロジェクトを開く
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+③	Sail を起動させる
 
-## Learning Laravel
+VS CodeでUbuntu-20.04（WSL）のターミナルを開き”./vendor/bin/sail shell”でSailを 起動する。
+http://localhost/loginにアクセスするとログイン画面が表示される。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 機能説明
+今回作成したTodoアプリは、アカウントを作成してタスクをフォルダで分けて管理することが出来る。
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+・会員登録(/register)
+メールアドレス、ユーザー名、パスワードを設定してアカウントを作成する。
+ 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+・ログイン画面(/login)
+登録したメールアドレスとパスワードを入力しログインすると自分のフォルダ、タスク一覧ページが表示される。
+ 
+・フォルダ作成(/folders/create)
+タスクを区別するフォルダを作成する。 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+・フォルダとタスク一覧ページ(folders/id/tasks)
+作成したフォルダごとに管理されたタスク一覧が表示される。
+選択しているフォルダは青くなり、横にタスクのタイトルと状態と期限を見ることができる。タスクの状態は「未着手」「着手中」「完了」がありそれぞれ異なる色で表示されているため進歩状況を容易に見分けることが出来る。
 
-## Code of Conduct
+  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-## License
+・タスク作成（/folders/id/tasks/create）
+フォルダとタスク一覧ページ(folders/id/tasks)の「タスクを追加する」のボタンを押すとタスク作成ページに飛ぶ。タスクの名前と期限を設定できる。 
+・タスク編集(/folders/id/tasks/task_id/edit)
+フォルダとタスク一覧ページ(folders/id/tasks)のタスクに「編集」という項目を押すとタスク編集ページに飛び、タイトルとタスクの進捗状況と期限を変えられることが出来る。 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## データベース構成図
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+参考サイト
+環境構築
+https://tomosta.jp/2023/04/laravel10/
+アプリ製作
+https://www.hypertextcandy.com/laravel-tutorial-todo-app-design/
+データベース作成
+https://www.ntt.com/business/sdpf/knowledge/archive_50.html
+
+
