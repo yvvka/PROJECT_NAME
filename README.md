@@ -47,16 +47,7 @@ http://localhost/loginにアクセスするとログイン画面が表示され�
 
 ## データベース構成図
 
-
-
-
-
-
-
-
-
-
-
+![データベース](https://github.com/yvvka/PROJECT_NAME/assets/96856462/9fc3ad76-8515-4a8c-aef3-321381c73656)
 
 
 
