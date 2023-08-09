@@ -6,7 +6,7 @@
 
 ②	プロジェクトをVS Codeで開く
 
-Windows PowerShellを開いてUbuntu-20.04を選択し”cd PROJECT_NAME”, ”code .”でVS Codeでプロジェクトを開く
+Windows PowerShellを開いてUbuntu-20.04を選択し”cd PROJECT_NAME”, ”code .”でVS Codeでプロジェクトを開く。
 
 ③	Sail を起動させる
 
@@ -34,7 +34,7 @@ http://localhost/loginにアクセスするとログイン画面が表示され�
 
 ・フォルダとタスク一覧ページ(folders/id/tasks)
 
-作成したフォルダごとに管理されたタスク一覧が表示される。
+作成したフォルダごとに管理されているタスクの一覧が表示される。
 選択しているフォルダは青くなり、横にタスクのタイトルと状態と期限を見ることができる。タスクの状態は「未着手」「着手中」「完了」がありそれぞれ異なる色で表示されているため進歩状況を容易に見分けることが出来る。
 ![foldersidtasklist](https://github.com/yvvka/PROJECT_NAME/assets/96856462/f1bd0859-e9a2-448e-ba47-9355890e5220)
   
