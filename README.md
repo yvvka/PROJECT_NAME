@@ -63,11 +63,17 @@ http://localhost/loginにアクセスするとログイン画面が表示され�
 
 
 参考サイト
+
 環境構築
+
 https://tomosta.jp/2023/04/laravel10/
+
 アプリ製作
+
 https://www.hypertextcandy.com/laravel-tutorial-todo-app-design/
+
 データベース作成
+
 https://www.ntt.com/business/sdpf/knowledge/archive_50.html
 
 
