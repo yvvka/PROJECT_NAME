@@ -26,6 +26,7 @@ http://localhost/loginにアクセスするとログイン画面が表示され�
  
 ・フォルダ作成(/folders/create)
 タスクを区別するフォルダを作成する。 
+![folderscreate-page](https://github.com/yvvka/PROJECT_NAME/assets/96856462/6553c880-72e1-4095-a40f-6486cd64b669)
 
 
 
